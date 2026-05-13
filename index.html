@@ -1,0 +1,366 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Máy Phơi Thông Minh Thành Công - Công Nghệ Tiên Phong</title>
+    <style>
+        :root {
+            --primary: #1a5f7a;
+            --secondary: #27ae60;
+            --dark: #2c3e50;
+            --white: #ffffff;
+            --accent: #e67e22;
+            --blue-tech: #2980b9;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 0;
+            color: var(--dark);
+            background-color: #f4f7f6;
+            scroll-behavior: smooth;
+        }
+
+        nav {
+            background: var(--white);
+            padding: 1rem 5%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+
+        .logo { font-size: 1.5rem; font-weight: bold; color: var(--primary); }
+
+        .hero {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 4rem 10%;
+            background: linear-gradient(135deg, #1a5f7a 0%, #2980b9 100%);
+            color: var(--white);
+            flex-wrap: wrap;
+        }
+
+        .hero-text { flex: 1; min-width: 300px; padding-right: 20px; }
+        .hero-text h1 { font-size: 2.5rem; margin-bottom: 1rem; }
+        
+        .hero-image { flex: 1; min-width: 300px; text-align: center; }
+        .hero-image img { 
+            max-width: 100%; 
+            border-radius: 20px; 
+            box-shadow: 0 20px 40px rgba(0,0,0,0.3); 
+            border: 5px solid rgba(255,255,255,0.2);
+        }
+
+        .btn-cta {
+            display: inline-block;
+            padding: 1rem 2rem;
+            background: var(--secondary);
+            color: var(--white);
+            text-decoration: none;
+            border-radius: 50px;
+            font-weight: bold;
+            transition: 0.3s;
+        }
+
+        .section-title { text-align: center; margin: 3rem 0; }
+        .section-title h2 { color: var(--primary); font-size: 2rem; }
+
+        .features {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2rem;
+            padding: 0 10%;
+        }
+
+        .feature-card {
+            background: var(--white);
+            padding: 2rem;
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+            transition: 0.3s;
+            border-bottom: 4px solid transparent;
+            text-align: center;
+        }
+
+        .feature-card:hover { transform: translateY(-10px); border-color: var(--secondary); }
+        .feature-card h3 { color: var(--primary); margin-bottom: 1rem; }
+        .feature-card img { max-width: 100%; height: auto; border-radius: 10px; margin-top: 15px; }
+
+        .video-section {
+            padding: 4rem 10%;
+            background: #fff;
+        }
+        .video-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+            gap: 2rem;
+        }
+        .video-card {
+            background: #f4f7f6;
+            padding: 1rem;
+            border-radius: 15px;
+            box-shadow: 0 10px 20px rgba(0,0,0,0.05);
+            text-align: center;
+        }
+        video { width: 30%; border-radius: 10px; }
+
+        .advantages-box {
+            background: #eef2f3;
+            padding: 3rem 10%;
+            margin-top: 3rem;
+        }
+        .adv-list {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 1.5rem;
+        }
+        .adv-item {
+            background: white;
+            padding: 1.5rem;
+            border-left: 5px solid var(--accent);
+            border-radius: 5px;
+        }
+
+        .stats-table {
+            width: 80%;
+            margin: 2rem auto;
+            border-collapse: collapse;
+            background: white;
+        }
+        .stats-table th, .stats-table td {
+            padding: 1rem;
+            border: 1px solid #ddd;
+            text-align: left;
+        }
+        .stats-table th { background: var(--primary); color: white; }
+
+        footer {
+            background: var(--dark);
+            color: var(--white);
+            padding: 3rem 10%;
+            text-align: center;
+        }
+
+        @media (max-width: 768px) {
+            .adv-list { grid-template-columns: 1fr; }
+            .video-container { grid-template-columns: 1fr; }
+        }
+    </style>
+</head>
+<body>
+<div style="background: var(--accent); color: white; text-align: center; padding: 10px; font-weight: bold; font-size: 0.9rem;">
+    📢 Giai đoạn hoàn thiện cuối cùng: Đặt hàng trước ngay để nhận ưu đãi GIẢM 30% chi phí!
+</div>
+
+<nav>
+    <div class="logo">MÁY PHƠI THÔNG MINH THÀNH CÔNG</div>
+    <div>
+        <a href="#tinhnang" style="margin-right:20px; text-decoration:none; color:var(--dark)">Tính năng</a>
+        <a href="#video" style="margin-right:20px; text-decoration:none; color:var(--dark)">Video</a>
+        <a href="#uudiem" style="margin-right:20px; text-decoration:none; color:var(--dark)">Ưu điểm</a>
+        <a href="#lienhe" class="btn-cta" style="padding: 0.6rem 1.5rem;">Liên hệ</a>
+    </div>
+</nav>
+
+<section class="hero">
+    <div class="hero-text">
+    <h1>Máy Phơi Thông Minh <br>Hệ Thống 2 Sào Thế Hệ Mới</h1>
+    <p style="background: rgba(255,255,255,0.1); padding: 5px 15px; border-radius: 5px; display: inline-block; font-size: 0.9rem;">
+        🛡️ Sản phẩm đã được nộp đơn đăng ký bảo hộ sáng chế tại Cục Sở hữu trí tuệ và đang trong giai đoạn thẩm định nội dung.
+    </p>
+    
+    <p>Giải pháp bảo vệ quần áo tối ưu, sử dụng năng lượng mặt trời và công nghệ an toàn kép.</p>
+    
+    <div style="background: #ffeb3b; color: #d35400; padding: 15px; border-radius: 10px; margin: 20px 0; border-left: 5px solid #e67e22;">
+        <h3 style="margin: 0;">🔥 ƯU ĐÃI ĐẶT TRƯỚC - GIẢM 30%</h3>
+        <p style="margin: 5px 0 0 0; color: #2c3e50;">Sản phẩm đang trong giai đoạn hoàn thiện cuối cùng. Đăng ký ngay hôm nay để nhận mức giá ưu đãi nhất!</p>
+    </div>
+
+    <a href="#lienhe" class="btn-cta">Đặt hàng trước ngay</a>
+
+    <div class="hero-image">
+        <img src="may-phoi-do.jpg" alt="Máy phơi đồ Thành Công">
+    </div>
+</section>
+
+<section id="tinhnang">
+    <div class="section-title">
+        <h2>Tính Năng Thông Minh</h2>
+    </div>
+    <div class="features">
+        <div class="feature-card">
+            <h3>Cảm Biến Mưa Quang Học nhập từ mỹ</h3>
+            <p>Tự động nhận diện trời mưa hoặc tối để thu giàn phơi vào và tự động kéo ra khi trời nắng đẹp.</p>
+        </div>
+        <div class="feature-card">
+            <h3>Logic Ghi Đè Thông Minh</h3>
+            <p>Khi ở chế độ Tự động, nếu nhấn <b>Kéo ra</b>, hệ thống chuyển sang Bấm tay trong 1 phút để người dùng thao tác, sau đó tự quay về Tự động.</p>
+            <img src="ungdungdidong.jpg" alt="Điều khiển qua App và Giọng nói">
+            <p style="font-size: 0.9rem; margin-top: 5px; color: var(--primary);"><i>Điều khiển App & Giọng nói tiếng Việt</i></p>
+        </div>
+        <div class="feature-card">
+            <h3>Độc Lập Về Năng Lượng</h3>
+            <p>Vận hành hoàn toàn bằng năng lượng mặt trời, dự phòng 3 ngày không nắng nhờ pin Lithium-ion cao cấp.</p>
+        </div>
+        <div class="feature-card">
+            <h3>An Toàn Kép</h3>
+            <p>Bảo vệ bằng phần mềm kết hợp ly hợp trượt cơ khí, chống cháy động cơ khi gặp vật cản hoặc sự cố công tắc hành trình.</p>
+        </div>
+    </div>
+</section>
+
+<section id="video" class="video-section">
+    <div class="section-title">
+        <h2>Video Thực Tế Sản Phẩm phiên bản thử nghiệm</h2>
+    </div>
+    <div class="video-container">
+        <div class="video-card">
+            <video controls>
+                <source src="v1.mp4" type="video/mp4">
+            </video>
+            <p style="margin-top:10px; font-weight:bold;">Vận hành tải trọng thực tế</p>
+        </div>
+
+    </div>
+</section>
+
+<section id="uudiem" class="advantages-box">
+    <div class="section-title">
+        <h2>Ưu Điểm Vượt Trội Của Sáng Chế</h2>
+    </div>
+    <div class="adv-list">
+        <div class="adv-item">
+            <b>Tốc độ vượt trội:</b> Sử dụng động cơ mạnh mẽ, cho tốc độ kéo nhanh, tiết kiệm thời gian.
+        </div>
+        <div class="adv-item">
+            <b>Sức chứa cực lớn:</b> Thiết kế 2 sào song song với 32 móc treo trên chiều dài 2.4m.
+        </div>
+        <div class="adv-item">
+            <b>Dịch vụ tận tâm:</b> Hỗ trợ lắp đặt tận nơi cho khách hàng tại các tỉnh khu vực Miền Tây.
+        </div>
+        <div class="adv-item">
+            <b>Cam kết chất lượng:</b> Chế độ bảo hành 1 năm giúp quý khách hoàn toàn an tâm sử dụng.
+        </div>
+        <div class="adv-item">
+            <b>Thiết kế Module:</b> Dễ dàng tháo lắp, thu gọn để vận chuyển linh hoạt.
+        </div>
+        <div class="adv-item">
+            <b>Tiết kiệm điện:</b> Hoạt động tự chủ, không cần kéo dây điện rườm rà từ trong nhà.
+        </div>
+    </div>
+</section>
+
+<section id="thongso">
+    <div class="section-title">
+        <h2>Thông Số Kỹ Thuật</h2>
+    </div>
+    <table class="stats-table">
+        <tr><th>Hạng mục</th><th>Chi tiết</th></tr>
+        <tr><td><b>Động cơ</b></td><td>siêu khỏe</td></tr>
+        <tr><td><b>Bảo hành</b></td><td>12 tháng (1 năm)</td></tr>
+        <tr><td><b>Lắp đặt</b></td><td>Tận nơi (Khu vực Miền Tây)</td></tr>
+        <tr><td><b>Nguồn nạp</b></td><td>Tấm pin mặt trời hoặc có thể dùng nguồn 220v</td></tr>
+        <tr><td><b>Điều khiển</b></td><td>App Mobile / Giọng nói / Smart-Revert (1 phút)</td></tr>
+    </table>
+</section>
+<section id="dat-hang" style="padding: 4rem 5%; background: #fff; text-align: center;">
+    <div style="max-width: 1000px; margin: 0 auto;">
+        <h2 style="color: var(--primary); margin-bottom: 5px;">CHƯƠNG TRÌNH ĐẶT HÀNG ƯU ĐÃI</h2>
+        <p style="color: var(--accent); font-weight: bold; font-size: 1.2rem; margin-bottom: 30px;">Tiết kiệm ngay 10.800.000đ khi đăng ký hôm nay!</p>
+
+        <div style="display: flex; flex-wrap: wrap; gap: 25px; justify-content: center; align-items: stretch;">
+            
+            <div style="flex: 1; min-width: 300px; background: #f8f9fa; padding: 30px; border-radius: 15px; border: 1px solid #e1e8ed; text-align: left;">
+                <h3 style="border-bottom: 2px solid var(--secondary); padding-bottom: 10px; color: var(--dark);">Chi tiết giá</h3>
+                <p style="font-size: 1.1rem;">Giá gốc: <del style="color: #888;">36.000.000đ</del></p>
+                <p style="font-size: 1.3rem; color: var(--secondary); font-weight: bold;">Giá ưu đãi: 25.200.000đ</p>
+                <hr>
+                <p style="font-size: 1rem; color: var(--dark);"><b>Số tiền đặt cọc (50%): 12.600.000đ</b></p>
+                <p style="font-size: 0.85rem; color: #666; font-style: italic;">* Số còn lại (12.600.000đ) sẽ thanh toán sau khi lắp đặt hoàn thiện.</p>
+                
+                <a href="https://docs.google.com/forms/d/e/1FAIpQLSfY7_k380lxaxn-EanQLfjnIfwh513jNXJRR6cIeN42f3e1_A/viewform" 
+                   target="_blank" 
+                   style="display: block; background: var(--secondary); color: white; text-align: center; padding: 15px; border-radius: 8px; text-decoration: none; font-weight: bold; margin-top: 20px;">
+                    ĐĂNG KÝ THÔNG TIN GIAO HÀNG
+                </a>
+            </div>
+
+<div style="flex: 1; min-width: 300px; background: #eef7ff; padding: 30px; border-radius: 15px; border: 2px dashed var(--blue-tech); text-align: center;">
+    <h3 style="color: var(--primary); margin-bottom: 15px;">Quét mã đặt cọc</h3>
+    
+    <img src="https://img.vietqr.io/image/icb-101868357866-compact2.png?amount=12600000&addInfo=Coc%20May%20Phoi%20Thanh%20Cong&accountName=LE%20THANH%20CONG" 
+         alt="Mã QR Thanh Toán" 
+         style="max-width: 250px; border-radius: 10px; box-shadow: 0 4px 10px rgba(0,0,0,0.1); margin-bottom: 15px; display: inline-block;">
+    
+    <div style="text-align: left; font-size: 0.9rem; background: white; padding: 15px; border-radius: 8px; border: 1px solid #d1e3f0;">
+        <p style="margin: 3px 0;"><b>Ngân hàng:</b> VietinBank</p>
+        <p style="margin: 3px 0;"><b>Số tài khoản:</b> 101868357866</p>
+        <p style="margin: 3px 0;"><b>Người thụ hưởng:</b> LÊ THÀNH CÔNG</p>
+        <p style="margin: 3px 0;"><b>Số tiền cọc:</b> 12.600.000đ</p>
+        <p style="margin: 3px 0; color: #d35400;"><b>Nội dung:</b> [Tên anh/chị] cọc máy phơi</p>
+    </div>
+</div>
+
+        </div>
+    </div>
+</section>
+
+<footer id="lienhe">
+<h2>LIÊN HỆ TÁC GIẢ</h2>
+    <p><b>Lê Thành Công</b></p>
+    <p>📍 Vĩnh Long | 📞 0975 012 600</p>
+    <hr style="width: 50px; margin: 20px auto; border: 1px solid rgba(255,255,255,0.2);">
+    <p style="font-size: 0.9rem; opacity: 0.9;">
+        Sản phẩm đã được nộp đơn đăng ký bảo hộ sáng chế tại Cục Sở hữu trí tuệ (Đang trong giai đoạn thẩm định nội dung).
+    </p>
+    <p>© 2026 Bản quyền sáng chế thuộc về tác giả</p>
+<div style="background: rgba(255,255,255,0.1); padding: 15px; margin-top: 20px; border-radius: 8px; font-size: 0.9rem;">
+    <p style="margin-bottom: 10px;">📊 <b>Thống kê truy cập:</b></p>
+    
+    <div style="text-align: center;">
+        <div style="margin-bottom: 8px;">
+            <span style="color: #2ecc71;">●</span> Đang trực tuyến: 
+            <b><script type="text/javascript" src="https://www.freevisitorcounters.com/en/home/counter/1200035/t/0"></script></b>
+        </div>
+
+        <div style="margin-bottom: 8px;">
+            👤 Tổng lượt truy cập: 
+            <b><script type="text/javascript" src="https://www.freevisitorcounters.com/en/home/counter/1200035/t/1"></script></b>
+        </div>
+
+        <div style="margin-top: 10px; opacity: 0.8;">
+            <img src="https://www.freevisitorcounters.com/en/counter/render/1200035/t/3" border="0" style="max-width: 120px;">
+        </div>
+    </div>
+</div>
+</footer>
+
+<script>
+    let currentMode = 'AUTO';
+    let autoRevertTimer;
+
+    function triggerPushOut() {
+        if (currentMode === 'AUTO') {
+            currentMode = 'MANUAL';
+            clearTimeout(autoRevertTimer);
+            autoRevertTimer = setTimeout(() => {
+                currentMode = 'AUTO';
+            }, 60000); 
+        }
+    }
+
+    function triggerPullIn() {
+        currentMode = 'MANUAL';
+        clearTimeout(autoRevertTimer);
+    }
+</script>
+
+</body>
+</html>
